@@ -1,0 +1,23 @@
+{
+    "manifest_version": 3,
+  
+    "name": "Block didomi",
+    "description": "This extension will remove the didomi popup and allow to watch video on jeuxvideo.com without accept cookies or subscribe to a plan",
+    "version": "1.0",
+    "action": {
+     "default_icon": "icon.jpg",
+     "default_popup": "index.html"
+    },
+    "content_scripts": [
+        {
+            "matches": ["<all_urls>"],
+            "js": ["content_script.js"]
+        }
+    ],
+    "permissions": [
+        "webRequest",
+        "storage", 
+        "activeTab", 
+        "scripting"
+    ]
+}
